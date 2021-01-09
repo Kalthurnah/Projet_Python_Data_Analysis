@@ -18,7 +18,7 @@ Ne pas se fier à la répartition des tâches de ce GitHub. La répartition rée
 -	Réponses aux questions pertinentes : Bastien & Cécile
 -	Modélisation de plusieurs modèles et tests des hyperparamètres : Cécile
 -	Transformation en API : Bastien
--	Travail sur le PowerPoint de rendu : Bastien et Cécile
+-	Travail sur le PowerPoint de rendu : Cécile
 -	Rédaction du ReadMe : Bastien et Cécile
 
 ## Data-visualisation 
@@ -124,6 +124,6 @@ Nous avons implementé la possibilité d'entrer des queries personnalisée cepen
 
 En effet les querys se doivent d'être autosuffisantes, c’est-à-dire qu'elles ne nécessitent pas de calcul en amont, tel que l'ajout d'une colonne au préalable. Sachant que certains ajouts ont d'ores et déjà été effectués directement dans le code python. 
 
-Puis nous avons implémenté la navigation grâce aux structures flask
+Puis nous avons implémenté la navigation grâce aux structures flask;
 
-Le fichier header.htlm contient tout le nécessaire pour afficher le bandeau supérieur de notre page. et ainsi nous pouvons simplement utiliser {% extends "header.html" %} pour le mettre à chacune de nos pages.
+Le fichier header.htlm contient tout le nécessaire pour afficher le bandeau supérieur de notre page. Ainsi nous pouvons simplement utiliser {% extends "header.html" %} pour le mettre à chacune de nos pages.
