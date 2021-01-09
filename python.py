@@ -2,7 +2,9 @@ from flask import Flask, render_template, request # pip install flask
 import numpy as np
 import pandas as pd
 from pandas import Series, DataFrame
+import matplotlib
 import matplotlib.pyplot as plt
+matplotlib.use('Agg')
 
 Shoppers= pd.read_csv("online_shoppers_intention.csv",sep=",")
 #fix the dataset
@@ -14,6 +16,8 @@ plt.rcParams['figure.dpi']= 200
 fig, ax = plt.subplots()
 Shoppers[Shoppers.VisitorType=="New_Visitor"].groupby(["Month"]).ProductRelated.sum().plot()
 fig.savefig('static/graph1.png')
+QueryNumber = 1
+
 
 app = Flask(__name__)
 
@@ -22,9 +26,31 @@ def home():
     return render_template('home.html')
 
 
-@app.route('/AnalystView')
+@app.route('/AnalystView', methods=['GET', 'POST'])
 def AnalystView():
     return render_template('AnalystView.html')
+
+@app.route('/AnalystViewResult', methods=['GET', 'POST'])
+def AnalystViewResult():
+    Query = request.form['QueryPlot']
+    try: 
+        exec(Query)
+        fig.savefig('static/Graph' + str(QueryNumber) +'.png')
+        return render_template('AnalystViewResult.html')
+    except:
+        return render_template('AnalystViewResultFail.html')
+
+@app.route('/AnalystViewResultDataframe', methods=['GET', 'POST'])
+def AnalystViewResultDataframe():
+    Query = request.form['Query']
+    try: 
+        return render_template('AnalystViewResultDataframe.html',tables=exec(Query).to_html())
+    except:
+        return render_template('AnalystViewResultFail.html')
+
+@app.route('/AnalystViewResultFail', methods=['GET', 'POST'])
+def AnalystViewResultFail():
+    return render_template('AnalystViewResultFail.html')
 
 @app.route('/MLView')
 def MLView():
