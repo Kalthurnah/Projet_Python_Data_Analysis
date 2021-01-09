@@ -16,7 +16,7 @@ plt.rcParams['figure.dpi']= 200
 fig, ax = plt.subplots()
 Shoppers[Shoppers.VisitorType=="New_Visitor"].groupby(["Month"]).ProductRelated.sum().plot()
 fig.savefig('static/graph1.png')
-QueryNumber = 1
+QueryNumber = 0
 
 
 app = Flask(__name__)
@@ -35,8 +35,11 @@ def AnalystViewResult():
     Query = request.form['QueryPlot']
     try: 
         exec(Query)
+        global QueryNumber
+        QueryNumber=QueryNumber+1
+        
         fig.savefig('static/Graph' + str(QueryNumber) +'.png')
-        return render_template('AnalystViewResult.html')
+        return render_template('AnalystViewResult.html',Urlpng=('static/Graph' + str(QueryNumber) +'.png'))
     except:
         return render_template('AnalystViewResultFail.html')
 
