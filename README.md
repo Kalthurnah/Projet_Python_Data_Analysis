@@ -96,12 +96,11 @@ Bien entendu les graphiques du PowerPoint de présentation ne sont pas ceux du n
 
 Nous avons voulu appliquer également des algorithmes de prédiction en choisissant comme label la colonne Revenue (c'est à dire la colonne qui correspond à l'achat effecuté ou non). Nous utilisons comme métrique l'accuracy et la matrice de confusion.
 
-De la même manière nous avons voulu faire varier les paramètres mais notre nombre de données est assez limité, nous avons donc peu d'accuracy différentes. Cependant l'accuracy est très élevée dès que le nombre d'arbre dans la forêt et le nombre
-
+De la même manière nous avons voulu faire varier les paramètres mais notre nombre de données est assez limité, nous avons donc peu d'accuracy différentes. Cependant l'accuracy est très élevée dès que le nombre d'arbre dans la forêt et le nombre maximum d'itération de l'algorithme atteignent respectivement 15 et 20. 
 
 
 ### Support Vector Classifier
 
 Nous avons également souhaité appliquer un deuxième algorithme de prédiction, nous avons donc choisi celui-ci. 
 
-Nous avons conservé les mêmes métriques que précédement. Avec ces métriques, sur cet alogirthme, nous avons à nouveau des valeurs d'accuracy excellente.
+Nous avons conservé les mêmes métriques que précédement. Avec ces métriques, sur cet alogirthme, nous avons à nouveau des valeurs d'accuracy excellente. EN changeant le paramètre de tolérence du critère d'arrêt 
