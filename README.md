@@ -54,11 +54,17 @@ Parmis nos phases exploratoires, nous avons soulevés quelques questions qui nou
   
 - Quels sont les types de page les plus vues en fonction du type de visiteur ? Et en terme de pourcentage, y-a-t-il une différence ?
 
+
 Pourcentage de visite administrative parmi les Returning_Visitor : 6.189591889677422
+
 Pourcentage de visite de produit parmi les Returning_Visitor : 92.3645946508241
+
 Pourcentage de visite administrative parmi les New_Visitor : 12.186733572012516
+
 Pourcentage de visite de produit parmi les New_Visitor : 86.22050573675753
+
 Pourcentage de visite administrative parmi les Other : 10.416666666666668
+
 Pourcentage de visite de produit parmi les Other : 88.33333333333333
 
 - Le type de pages vues change-t-il en fonction du mois de l'année ?
