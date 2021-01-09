@@ -23,9 +23,10 @@ Ne pas se fier à la répartition des tâches de ce GitHub. La répartition rée
 
 ## Data-visualisation 
 
-- Notre dataset contient des informations relatives à des visites d'un site internet, et des achats effectués ou non. 
-- Nous avons commencé par regarder nos colonnes, ce qu’elles représentent, ainsi que les corrélations entre ces colonnes.
-- Voici les colonnes et ce qu'elles contiennet :
+Notre dataset contient des informations relatives à des visites d'un site internet, et des achats effectués ou non. 
+Nous avons commencé par regarder nos colonnes, ce qu’elles représentent, ainsi que les corrélations entre ces colonnes.
+
+Voici les colonnes et ce qu'elles contiennet :
 - Administrative int64 : nombre de page administrative vues
 - Administrative_Duration float64 : temps passé sur les pages administratives
 - Informational int64 : nombre de page d’information vues
@@ -72,3 +73,26 @@ De même les utilisateurs regardent les pages dans les mêmes proportions le wee
 
 On peut noter que les mois d'Août à Novembre offrent une plus grande proportion d'achat par visite. Ceci pourrait s'expliquer de différentes manières en fonction du type de services / fournitures vendues par le site.
 Le week-end ne change pas le ratio achat par visite sur le site internet.
+
+
+
+
+## Modélisation
+
+
+
+### KMeans
+
+Nous avons d'abord voulu classer nos données en faisant un KMeans. En effet, dans le cas de comportement d'un client, il peut être intéressant de les regrouper afin dans faire des catégories. Ici nous avons testé avec 7 et 13 clusters. Nous avons choisi la somme de l'erreur carrée moyenne comme métrique.
+
+Nous avons obtenus des résultats intéressants, mais il est important de noter que dans les deux cas nous ne pouvons pas juger pleinement de la justesse de notre clustering car la somme de l'erreur moyenne sera toujours très élevée. Si on augmente beaucoup le nombre de clusters (de l'ordre du nombre de données) nous obtiendrions une SSE faible, mais le clustering aurait alors perdu totalement de son intérêt.
+
+Nous avons aussi fait varier différents paramètres de notre étapes de clustering, afin de trouver les paramètres les plus "optimisés" (en prenant en considération que nous ne voulions pas d'un nombre de cluster très grand par exemple).
+
+Bien entendu les graphiques du PowerPoint de présentation ne sont pas ceux du notebook car le notebook a été relancé depuis la création du PowerPoint.
+
+
+### RandomForest
+
+Nous avons voulu appliquer également des algorithmes de prédiction en choisissant comme label la colonne Revenue (c'est à dire la colonne qui correspond à l'achat effecuté ou non). Nous utilisons comme métrique l'accuracy et la matrice de confusion.
+De la même manière nous avons voulu faire varier les paramètres mais notre nombre de données est assez limité, nous avons donc peu d'accuracy différentes.
