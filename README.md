@@ -109,4 +109,4 @@ De la même manière nous avons voulu faire varier les paramètres mais notre no
 
 Nous avons également souhaité appliquer un deuxième algorithme de prédiction, nous avons donc choisi celui-ci. 
 
-Nous avons conservé les mêmes métriques que précédement. Avec ces métriques, sur cet alogirthme, nous avons à nouveau des valeurs d'accuracy excellente. EN changeant le paramètre de tolérence du critère d'arrêt 
+Nous avons conservé les mêmes métriques que précédement. Avec ces métriques, sur cet alogirthme, nous avons à nouveau des valeurs d'accuracy excellente. En changeant le paramètre de tolérence du critère d'arrêt et en changeant le type de kernel nous n'avons pas obtenu de résultats différents.
