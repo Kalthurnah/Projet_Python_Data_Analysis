@@ -54,11 +54,17 @@ Parmis nos phases exploratoires, nous avons soulevés quelques questions qui nou
   
 - Quels sont les types de page les plus vues en fonction du type de visiteur ? Et en terme de pourcentage, y-a-t-il une différence ?
 
+
 Pourcentage de visite administrative parmi les Returning_Visitor : 6.189591889677422
+
 Pourcentage de visite de produit parmi les Returning_Visitor : 92.3645946508241
+
 Pourcentage de visite administrative parmi les New_Visitor : 12.186733572012516
+
 Pourcentage de visite de produit parmi les New_Visitor : 86.22050573675753
+
 Pourcentage de visite administrative parmi les Other : 10.416666666666668
+
 Pourcentage de visite de produit parmi les Other : 88.33333333333333
 
 - Le type de pages vues change-t-il en fonction du mois de l'année ?
@@ -96,15 +102,13 @@ Bien entendu les graphiques du PowerPoint de présentation ne sont pas ceux du n
 
 Nous avons voulu appliquer également des algorithmes de prédiction en choisissant comme label la colonne Revenue (c'est à dire la colonne qui correspond à l'achat effecuté ou non). Nous utilisons comme métrique l'accuracy et la matrice de confusion.
 
-De la même manière nous avons voulu faire varier les paramètres mais notre nombre de données est assez limité, nous avons donc peu d'accuracy différentes. Cependant l'accuracy est très élevée dès que le nombre d'arbre dans la forêt et le nombre
-
+De la même manière nous avons voulu faire varier les paramètres mais notre nombre de données est assez limité, nous avons donc peu d'accuracy différentes. Cependant l'accuracy est très élevée dès que le nombre d'arbre dans la forêt et le nombre maximum d'itération de l'algorithme atteignent respectivement 15 et 20. 
 
 
 ### Support Vector Classifier
 
-Nous avons également souhaité appliquer un deuxième algorithme de prédiction, nous avons donc choisi celui-ci. 
-
-Nous avons conservé les mêmes métriques que précédement. Avec ces métriques, sur cet alogirthme, nous avons à nouveau des valeurs d'accuracy excellente.
+Nous avons également souhaité appliquer un deuxième algorithme de prédiction, nous avons donc choisi celui-ci.
+Nous avons conservé les mêmes métriques que précédement. Avec ces métriques, sur cet alogirthme, nous avons à nouveau des valeurs d'accuracy excellente. En changeant le paramètre de tolérence du critère d'arrêt et en changeant le type de kernel nous n'avons pas obtenu de résultats différents. 
 
 ## API
 
@@ -123,4 +127,3 @@ En effet les querys se doivent d'être autosuffisantes, c’est-à-dire qu'elles
 Puis nous avons implémenté la navigation grâce aux structures flask
 
 Le fichier header.htlm contient tout le nécessaire pour afficher le bandeau supérieur de notre page. et ainsi nous pouvons simplement utiliser {% extends "header.html" %} pour le mettre à chacune de nos pages.
-
