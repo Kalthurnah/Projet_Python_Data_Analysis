@@ -105,3 +105,22 @@ De la même manière nous avons voulu faire varier les paramètres mais notre no
 Nous avons également souhaité appliquer un deuxième algorithme de prédiction, nous avons donc choisi celui-ci. 
 
 Nous avons conservé les mêmes métriques que précédement. Avec ces métriques, sur cet alogirthme, nous avons à nouveau des valeurs d'accuracy excellente.
+
+## API
+
+Nous avons utilisé python avec la librairie flask.​
+
+Exécuter le fichier python.py pour lancer la démonstration.​
+
+Il y a un total de 7 fichiers htlm dans un dossier templates, ainsi qu'un fichier python à la racine et un dossier static où les images seront enregistrées.
+
+Il faut ajouter dans le dossier racine le csv de notre dataset.
+
+Nous avons implementé la possibilité d'entrer des queries personnalisée cependant cela a des limites. 
+
+En effet les querys se doivent d'être autosuffisantes, c’est-à-dire qu'elles ne nécessitent pas de calcul en amont, tel que l'ajout d'une colonne au préalable. Sachant que certains ajouts ont d'ores et déjà été effectués directement dans le code python. 
+
+Puis nous avons implémenté la navigation grâce aux structures flask
+
+Le fichier header.htlm contient tout le nécessaire pour afficher le bandeau supérieur de notre page. et ainsi nous pouvons simplement utiliser {% extends "header.html" %} pour le mettre à chacune de nos pages.
+
